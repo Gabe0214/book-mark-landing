@@ -20,6 +20,7 @@ $mobile-box: 6%;
 
 @mixin sub-text {
 	color: $grey-blue;
+	font-size: 1.4rem;
 }
 
 @mixin links {
