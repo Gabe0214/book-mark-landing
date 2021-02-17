@@ -1,0 +1,16 @@
+#section-1 {
+	overflow-x: hidden;
+
+	.inner-content {
+		display: flex;
+		flex-direction: column;
+
+		.shape-img {
+			position: relative;
+			margin-bottom: 8%;
+			img {
+				width: 310px;
+			}
+		}
+	}
+}

@@ -7,3 +7,17 @@ $dark-blue: hsl(229, 31%, 21%);
 $body-font-size: 18px;
 $nav-link-color: #fff;
 $font-family: 'Rubik', sans-serif;
+$mobile-box: 6%;
+
+@mixin mobile-spacing {
+	padding: 0 $mobile-box;
+	margin-top: 8%;
+}
+
+@mixin titles-color {
+	color: $dark-blue;
+}
+
+@mixin sub-text {
+	color: $grey-blue;
+}
