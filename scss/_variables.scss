@@ -26,3 +26,7 @@ $mobile-box: 6%;
 @mixin links {
 	color: $nav-link-color;
 }
+
+@mixin text-center {
+	text-align: center;
+}
