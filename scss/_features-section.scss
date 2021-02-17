@@ -20,6 +20,11 @@
 				font-size: 1.8rem;
 				font-weight: 400;
 				position: relative;
+				cursor: pointer;
+
+				&:hover {
+					cursor: pointer;
+				}
 			}
 
 			.active-tab {
