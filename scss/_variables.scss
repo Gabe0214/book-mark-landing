@@ -21,3 +21,7 @@ $mobile-box: 6%;
 @mixin sub-text {
 	color: $grey-blue;
 }
+
+@mixin links {
+	color: $nav-link-color;
+}
