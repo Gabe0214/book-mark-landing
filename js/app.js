@@ -2,6 +2,7 @@ const burger = document.querySelector('.hamburger');
 const mobileMenu = document.querySelector('.mobile-menu');
 const navBar = document.querySelector('#nav-bar');
 let menuOpen = false;
+
 burger.addEventListener('click', (e) => {
 	menuOpen = !menuOpen;
 	e.preventDefault();
