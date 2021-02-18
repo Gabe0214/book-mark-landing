@@ -34,8 +34,16 @@
 	font-weight: 500;
 }
 
+.blue {
+	background-color: $primary-color;
+}
+
 .shape-img {
 	position: relative;
 	margin-bottom: 8%;
 	width: 100%;
+}
+
+.text-content-container {
+	@include text-center;
 }
