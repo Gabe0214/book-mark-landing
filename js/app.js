@@ -5,9 +5,12 @@ const tabs = document.querySelectorAll('.option');
 const tabImage = document.querySelector('#tab-image');
 const tabTitle = document.querySelector('#tab-title');
 const tabText = document.querySelector('#tab-text');
+const dropDownOptionsText = document.querySelectorAll('.tab-info');
+const faqTabs = document.querySelectorAll('.question-arrow-container');
+const arrows = document.querySelectorAll('.arrow');
 let menuOpen = false;
 
-console.log(tabImage);
+console.log({ dropDownOptionsText, faqTabs });
 burger.addEventListener('click', (e) => {
 	menuOpen = !menuOpen;
 	e.preventDefault();
@@ -66,4 +69,33 @@ function changeTab(e) {
 
 function removeMark() {
 	tabs.forEach((tab) => tab.classList.remove('active-tab'));
+}
+
+// faq tabs functionality
+
+faqTabs.forEach((tab) => {
+	tab.addEventListener('click', openTab);
+});
+
+function openTab(e) {
+	e.preventDefault();
+	const node = e.target;
+	console.log(node);
+	if (node.id == 'tab-1') {
+		dropDownOptionsText[0].classList.toggle('is-open');
+		arrows[0].classList.toggle('arrow-up');
+	}
+	if (node.id == 'tab-2') {
+		dropDownOptionsText[1].classList.toggle('is-open');
+		arrows[1].classList.toggle('arrow-up');
+	}
+	if (node.id == 'tab-3') {
+		dropDownOptionsText[2].classList.toggle('is-open');
+		arrows[2].classList.toggle('arrow-up');
+	}
+
+	if (node.id == 'tab-4') {
+		dropDownOptionsText[3].classList.toggle('is-open');
+		arrows[3].classList.toggle('arrow-up');
+	}
 }
