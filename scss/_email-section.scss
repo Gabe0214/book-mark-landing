@@ -1,0 +1,67 @@
+#email {
+	.email-bg {
+		.text-content-container {
+			color: #fff;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			padding-top: 25px;
+
+			.input-btn-container {
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+				margin-top: 20px;
+				position: relative;
+
+				input,
+				button {
+					// height: 5vh;
+					border-radius: 5px;
+					padding: 1.5rem 0;
+				}
+
+				input {
+					padding-left: 10px;
+					padding-right: 10px;
+					outline: red;
+					border: none;
+				}
+				.error {
+					position: absolute;
+					right: 9px;
+					top: 12px;
+					display: none;
+				}
+
+				.error-message {
+					width: 100%;
+					position: absolute;
+					bottom: 110px;
+					z-index: -1;
+					background-color: $secondary-color;
+					border-radius: 0 0 5px 5px;
+					transition: .6s;
+					text-align: left;
+					padding: 0 10px;
+				}
+
+				.show-message {
+					z-index: 1;
+					transition: .6s;
+					bottom: 72px;
+				}
+
+				button {
+					background-color: $secondary-color;
+					color: #fff;
+					border: none;
+					font-weight: 500;
+					font-family: 'Rubik', sans-serif;
+					margin: 39px 0 15px 0;
+				}
+			}
+		}
+	}
+}

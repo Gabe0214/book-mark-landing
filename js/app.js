@@ -8,9 +8,12 @@ const tabText = document.querySelector('#tab-text');
 const dropDownOptionsText = document.querySelectorAll('.tab-info');
 const faqTabs = document.querySelectorAll('.question-arrow-container');
 const arrows = document.querySelectorAll('.arrow');
+const input = document.querySelector('#email-input');
+const errorImg = document.querySelector('.error');
+const errorMessage = document.querySelector('.error-message');
 let menuOpen = false;
 
-console.log({ dropDownOptionsText, faqTabs });
+console.log(input);
 burger.addEventListener('click', (e) => {
 	menuOpen = !menuOpen;
 	e.preventDefault();
@@ -97,5 +100,23 @@ function openTab(e) {
 	if (node.id == 'tab-4') {
 		dropDownOptionsText[3].classList.toggle('is-open');
 		arrows[3].classList.toggle('arrow-up');
+	}
+}
+
+input.addEventListener('input', onChange);
+
+const re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+function onChange(e) {
+	const node = e.target;
+
+	if (!re.test(node.value)) {
+		node.style.border = '#fa5757 2px solid';
+		errorImg.style.display = 'block';
+		errorMessage.classList.add('show-message');
+	} else {
+		node.style.border = 'none';
+		errorImg.style.display = 'none';
+		errorMessage.classList.remove('show-message');
 	}
 }
