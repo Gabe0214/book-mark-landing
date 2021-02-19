@@ -1,0 +1,68 @@
+#faq {
+	margin-bottom: 15px;
+	.text-drop-down-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		.text-content-container {
+			margin-bottom: 25px;
+		}
+
+		.drop-down-container {
+			.question-container {
+				&:not(:first-child) {
+					border-top: 1px solid #e3e4e8;
+					border-bottom: 1px solid #e3e4e8;
+				}
+
+				.question-arrow-container {
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+					height: 6vh;
+					align-items: center;
+
+					p {
+						position: relative;
+						z-index: -1;
+					}
+
+					svg {
+						position: relative;
+						z-index: -1;
+						transition: 0.6s ease all;
+						path {
+							stroke: $primary-color;
+						}
+					}
+
+					.arrow-up {
+						transform: rotate(180deg);
+						transition: 0.6s ease all;
+
+						path {
+							stroke: $secondary-color;
+						}
+					}
+				}
+
+				.tab-info {
+					overflow-y: hidden;
+					max-height: 0;
+					transition: max-height 0.5s ease;
+				}
+
+				.is-open {
+					max-height: 500px;
+					transition: max-height 0.7s ease;
+					// transition: max-height .6s ease 0s;
+				}
+			}
+		}
+		.primary-btn {
+			margin-top: 15px;
+		}
+	}
+}
