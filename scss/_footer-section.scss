@@ -1,0 +1,44 @@
+#footer {
+	background: $dark-blue;
+	padding: 4rem 0 0 0;
+	.footer-content {
+		.logo-footer-links-container {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+			svg {
+				margin-bottom: 10px;
+				.letters {
+					fill: #fff;
+				}
+			}
+
+			a {
+				width: 100%;
+				text-align: center;
+				padding: 1rem 0;
+
+				&:hover {
+					color: $secondary-color;
+					transition: .6s;
+				}
+			}
+		}
+
+		.social-links {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			margin-top: 15px;
+
+			a {
+				&:not(:last-child) {
+					margin-right: 35px;
+				}
+			}
+		}
+	}
+}
