@@ -1,0 +1,11 @@
+@mixin thin-mobile {
+	@media (max-width: $thin-mobile) {
+		@content;
+	}
+}
+
+@mixin tablet-view {
+	@media (min-width: $tablet) {
+		@content;
+	}
+}
