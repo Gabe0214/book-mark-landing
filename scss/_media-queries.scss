@@ -1,0 +1,5 @@
+@mixin thin-mobile {
+	@media (max-width: $thin-mobile) {
+		@content;
+	}
+}

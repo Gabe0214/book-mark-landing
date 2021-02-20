@@ -8,6 +8,7 @@ $body-font-size: 18px;
 $nav-link-color: #fff;
 $font-family: 'Rubik', sans-serif;
 $mobile-box: 6%;
+$thin-mobile: 22.6875em;
 
 @mixin mobile-spacing {
 	padding: 0 $mobile-box;

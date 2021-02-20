@@ -25,8 +25,16 @@
 			flex-direction: row;
 			justify-content: center;
 
+			@include thin-mobile {
+				flex-direction: column;
+			}
+
 			.blue {
 				background-color: $primary-color;
+
+				@include thin-mobile {
+					margin: 2% 0;
+				}
 
 				&:hover {
 					background-color: darken($primary-color, 15%);
@@ -37,6 +45,10 @@
 			.grey {
 				background-color: lighten($grey-blue, 30%);
 				color: $dark-blue;
+
+				@include thin-mobile {
+					margin: 2% 0;
+				}
 
 				&:hover {
 					background-color: lighten($grey-blue, 20%);
