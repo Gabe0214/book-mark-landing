@@ -14,7 +14,43 @@
 				flex-direction: column;
 				width: 100%;
 				margin-top: 20px;
-				position: relative;
+
+				.input-error-container {
+					position: relative;
+					width: 100%;
+
+					input {
+						padding-left: 10px;
+						padding-right: 10px;
+						outline: red;
+						border: none;
+						width: 100%;
+					}
+					.error {
+						position: absolute;
+						right: 9px;
+						top: 12px;
+						display: none;
+					}
+
+					.error-message {
+						width: 100%;
+						position: absolute;
+						bottom: 3px;
+						z-index: -1;
+						background-color: $secondary-color;
+						border-radius: 0 0 5px 5px;
+						transition: .6s;
+						text-align: left;
+						padding: 0 10px;
+					}
+
+					.show-message {
+						z-index: 1;
+						transition: .6s;
+						bottom: -27px;
+					}
+				}
 
 				input,
 				button {
@@ -23,36 +59,36 @@
 					padding: 1.5rem 0;
 				}
 
-				input {
-					padding-left: 10px;
-					padding-right: 10px;
-					outline: red;
-					border: none;
-				}
-				.error {
-					position: absolute;
-					right: 9px;
-					top: 12px;
-					display: none;
-				}
+				// input {
+				// 	padding-left: 10px;
+				// 	padding-right: 10px;
+				// 	outline: red;
+				// 	border: none;
+				// }
+				// .error {
+				// 	position: absolute;
+				// 	right: 9px;
+				// 	top: 12px;
+				// 	display: none;
+				// }
 
-				.error-message {
-					width: 100%;
-					position: absolute;
-					bottom: 110px;
-					z-index: -1;
-					background-color: $secondary-color;
-					border-radius: 0 0 5px 5px;
-					transition: .6s;
-					text-align: left;
-					padding: 0 10px;
-				}
+				// .error-message {
+				// 	width: 100%;
+				// 	position: absolute;
+				// 	bottom: 110px;
+				// 	z-index: -1;
+				// 	background-color: $secondary-color;
+				// 	border-radius: 0 0 5px 5px;
+				// 	transition: .6s;
+				// 	text-align: left;
+				// 	padding: 0 10px;
+				// }
 
-				.show-message {
-					z-index: 1;
-					transition: .6s;
-					bottom: 72px;
-				}
+				// .show-message {
+				// 	z-index: 1;
+				// 	transition: .6s;
+				// 	bottom: 72px;
+				// }
 
 				button {
 					background-color: $secondary-color;
