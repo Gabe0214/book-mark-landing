@@ -47,11 +47,21 @@
 
 	.image-info-container {
 		margin-top: 62px;
+
+		@include tablet-view {
+			max-width: 720px;
+			margin: 62px auto 0 auto;
+			width: 80%;
+		}
 		.shape-img {
 			display: flex;
 			flex-direction: row;
 			justify-content: center;
 			margin-bottom: 60px;
+
+			@include tablet-view {
+				margin-bottom: 86px;
+			}
 			img {
 				width: 84%;
 			}
@@ -59,6 +69,11 @@
 				transform: rotateY(-180deg);
 				right: 20%;
 				height: 86%;
+
+				@include tablet-view {
+					right: 36%;
+					height: 86%;
+				}
 			}
 		}
 

@@ -3,3 +3,9 @@
 		@content;
 	}
 }
+
+@mixin tablet-view {
+	@media (min-width: $tablet) {
+		@content;
+	}
+}

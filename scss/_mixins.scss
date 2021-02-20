@@ -1,0 +1,25 @@
+@mixin mobile-spacing {
+	padding: 0 $mobile-box;
+	margin-top: 8%;
+}
+
+@mixin titles-color {
+	color: $dark-blue;
+}
+
+@mixin sub-text {
+	color: $grey-blue;
+	font-size: 1.4rem;
+
+	@include tablet-view {
+		font-size: 2rem;
+	}
+}
+
+@mixin links {
+	color: $nav-link-color;
+}
+
+@mixin text-center {
+	text-align: center;
+}
