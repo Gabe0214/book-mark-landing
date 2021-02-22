@@ -9,3 +9,10 @@
 		@content;
 	}
 }
+
+@mixin desktop {
+	@media (min-width: $desktop) {
+		@content;
+	}
+
+}
