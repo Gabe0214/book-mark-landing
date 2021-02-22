@@ -1,6 +1,16 @@
 #email {
 	background-color: $primary-color;
+	@include tablet-view {
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
 	.email-bg {
+		@include tablet-view {
+			max-width: 720px;
+			margin: 0 auto;
+			width: 80%;
+		}
+
 		.text-content-container {
 			color: #fff;
 			display: flex;
@@ -9,15 +19,34 @@
 			align-items: center;
 			padding-top: 25px;
 
+			h2 {
+				@include tablet-view {
+					font-size: 2.8rem;
+				}
+			}
+
 			.input-btn-container {
 				display: flex;
 				flex-direction: column;
 				width: 100%;
 				margin-top: 20px;
 
+				@include tablet-view {
+					flex-direction: row;
+					max-width: 720px;
+					margin-right: auto;
+					margin-left: auto;
+					justify-content: center;
+				}
+
 				.input-error-container {
 					position: relative;
 					width: 100%;
+
+					@include tablet-view {
+						margin-right: 18px;
+						width: 55%;
+					}
 
 					input {
 						padding-left: 10px;
@@ -48,7 +77,7 @@
 					.show-message {
 						z-index: 1;
 						transition: .6s;
-						bottom: -27px;
+						bottom: -16px;
 					}
 				}
 
@@ -97,6 +126,11 @@
 					font-weight: 500;
 					font-family: 'Rubik', sans-serif;
 					margin: 39px 0 15px 0;
+
+					@include tablet-view {
+						margin: 0;
+						padding: 0 2rem;
+					}
 				}
 			}
 		}
