@@ -1,5 +1,11 @@
 #faq {
 	margin-bottom: 15px;
+
+	@include desktop {
+		@include desktop-layout;
+		width: 80%;
+		padding: 0;
+	}
 	.text-drop-down-container {
 		display: flex;
 		flex-direction: column;
@@ -8,6 +14,17 @@
 
 		.text-content-container {
 			margin-bottom: 25px;
+
+			h2 {
+				@include desktop {
+					font-size: 2.5rem;
+					margin-bottom: 2.5%;
+				}
+			}
+
+			p {
+				max-width: 620px;
+			}
 		}
 
 		.drop-down-container {
@@ -27,6 +44,10 @@
 					p {
 						position: relative;
 						z-index: -1;
+
+						@include desktop {
+							font-size: 2rem;
+						}
 					}
 
 					svg {
@@ -52,6 +73,10 @@
 					overflow-y: hidden;
 					max-height: 0;
 					transition: max-height 0.5s ease;
+
+					@include desktop {
+						font-size: 1.8rem;
+					}
 				}
 
 				.is-open {
