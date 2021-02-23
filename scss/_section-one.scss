@@ -1,5 +1,8 @@
 #section-1 {
-	overflow-x: hidden;
+	@include desktop {
+		padding: 0;
+		margin-top: 5%;
+	}
 
 	.inner-content {
 		display: flex;
@@ -11,16 +14,50 @@
 			width: 80%;
 		}
 
+		@include desktop {
+			@include desktop-layout;
+			flex-direction: row-reverse;
+		}
+
 		.shape-img {
+			@include desktop {
+				flex: 1;
+				margin-bottom: 0;
+			}
 			img {
 				width: 100%;
+			}
+
+			.shape {
+				@include desktop {
+					right: 0;
+					left: 40%;
+				}
 			}
 		}
 
 		.text-content-container {
+			@include desktop {
+				flex: 1;
+				text-align: left;
+				padding-top: 50px;
+			}
 			h1 {
 				line-height: 1.5;
 				font-size: 3rem;
+
+				@include desktop {
+					font-size: 4.2rem;
+					width: 92%;
+				}
+			}
+
+			p {
+				@include desktop {
+					font-size: 1.5rem;
+					max-width: 400px;
+					padding-top: 20px;
+				}
 			}
 		}
 
@@ -33,6 +70,11 @@
 
 			@include thin-mobile {
 				flex-direction: column;
+			}
+
+			@include desktop {
+				justify-content: flex-start;
+				align-items: center;
 			}
 
 			.blue {
