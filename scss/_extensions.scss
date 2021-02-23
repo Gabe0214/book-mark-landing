@@ -1,11 +1,42 @@
 #extensions {
 	margin-top: 80px;
 
+	@include desktop {
+		@include desktop-layout;
+		padding: 0;
+		width: 80%;
+	}
+
+	.text-content-container {
+		@include desktop {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		h2 {
+			@include desktop {
+				font-size: 2.5rem;
+			}
+		}
+
+		p {
+			@include desktop {
+				max-width: 576px;
+			}
+		}
+	}
+
 	.extension-cards-container {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+
+		@include desktop {
+			flex-direction: row;
+		}
 
 		.card {
 			box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
@@ -31,6 +62,18 @@
 
 			.primary-btn {
 				margin: 20px 0;
+			}
+		}
+
+		.second {
+			@include desktop {
+				margin-bottom: -32px;
+			}
+		}
+
+		.third {
+			@include desktop {
+				margin-bottom: -82px;
 			}
 		}
 	}
