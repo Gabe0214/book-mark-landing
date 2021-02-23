@@ -7,11 +7,38 @@
 	position: relative;
 	z-index: 1;
 
+	@include desktop {
+		@include desktop-layout;
+		padding-left: 0;
+		padding-right: 0;
+		width: 80%;
+	}
+
 	.desktop-links {
 		display: none;
+
+		@include desktop {
+			display: flex;
+		}
+
+		li {
+			padding-left: 18px;
+			a {
+				color: $dark-blue;
+			}
+		}
+		.secondary-btn {
+			padding: 1rem 3rem;
+			border-radius: 5px;
+			color: #fff;
+		}
 	}
 
 	.hamburger {
 		display: flex;
+
+		@include desktop {
+			display: none;
+		}
 	}
 }

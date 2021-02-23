@@ -1,5 +1,6 @@
 html {
 	font-size: 62.5%;
+	overflow-x: hidden;
 }
 
 *,
@@ -15,6 +16,7 @@ body {
 	font-family: $font-family;
 	line-height: 3rem;
 	font-size: 1.4rem;
+	overflow-x: hidden;
 }
 
 ul {
