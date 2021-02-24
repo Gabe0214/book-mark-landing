@@ -1,9 +1,16 @@
-const { src, dest, watch, series } = require('gulp');
+const { src, dest, watch, series, parallel } = require('gulp');
 const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const cssnano = require('cssnano');
 const terser = require('gulp-terser');
 const browsersync = require('browser-sync');
+const del = require('del');
+
+//clean dist
+
+function clean() {
+	return del([ 'dist' ]);
+}
 
 // Saas task
 
@@ -43,4 +50,9 @@ function watchTask() {
 
 //default gulp task
 
+const build = series(clean, parallel(scssTask, jsTask));
+
+//build task
+
 exports.default = series(scssTask, jsTask, browserSyncServer, watchTask);
+exports.build = build;
