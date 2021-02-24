@@ -12,4 +12,4 @@ Deployed at : "https://google.com"
 The reason why I decided to tackle this project was to build something modern, and clean.
 I learned a lot about layouts positioning, and accessibility.
 
-
+(https://github.com/Gabe0214/book-mark-landing/blob/main/images/landing-snip.PNG)
