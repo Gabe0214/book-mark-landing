@@ -7,7 +7,7 @@ I also used Gulp for task management, which made the development enviornment so 
 
 This project was a challenge created by : "https://frontendmentor.io". They have a ton of other projects, in which web developers can replicate it in code. 
 
-Deployed at : "https://google.com"
+Deployed at : "https://book-mark-landing-page.netlify.app/"
 
 The reason why I decided to tackle this project was to build something modern, and clean.
 I learned a lot about layouts positioning, and accessibility.
