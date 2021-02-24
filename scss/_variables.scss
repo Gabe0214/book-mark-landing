@@ -11,3 +11,8 @@ $mobile-box: 6%;
 $thin-mobile: 23em;
 $tablet: 40em;
 $desktop: 68.75em;
+
+// hamburger library variables. more info in node modules, not sure if this is good practice
+$hamburger-layer-width: 25px !default;
+$hamburger-layer-height: 3px !default;
+$hamburger-layer-spacing: 4px !default;
